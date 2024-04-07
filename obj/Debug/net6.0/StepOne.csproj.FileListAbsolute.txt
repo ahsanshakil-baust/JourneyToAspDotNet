@@ -1,0 +1,15 @@
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/bin/Debug/net6.0/StepOne
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/bin/Debug/net6.0/StepOne.deps.json
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/bin/Debug/net6.0/StepOne.runtimeconfig.json
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/bin/Debug/net6.0/StepOne.dll
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/bin/Debug/net6.0/ref/StepOne.dll
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/bin/Debug/net6.0/StepOne.pdb
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.csproj.AssemblyReference.cache
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.GeneratedMSBuildEditorConfig.editorconfig
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.AssemblyInfoInputs.cache
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.AssemblyInfo.cs
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.csproj.CoreCompileInputs.cache
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.dll
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/ref/StepOne.dll
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.pdb
+/media/ahsan/CODING/Self/AspDotNet/Programming/StepOne/obj/Debug/net6.0/StepOne.genruntimeconfig.cache
