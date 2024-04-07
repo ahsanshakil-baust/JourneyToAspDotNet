@@ -3,8 +3,8 @@
 namespace PracticeOne
 {
  public class Program{
-    static void Main(string[] args){
 
+    static void Main(string[] args){
         // Arrays
 
         int [] favNums=new int[3];
@@ -25,6 +25,15 @@ namespace PracticeOne
         string[,] custNames=new string[2,2] {{"Bob","Smith"},{"Sally","Smith"}};
         Console.WriteLine("MD Value : {0}",custNames.GetValue(1,1));
         
+        for (int i = 0; i < custNames.GetLength(0); i++)
+        {
+            for (int j = 0; j < custNames.GetLength(0); j++)
+            {
+                Console.WriteLine("{0}",custNames[i,j]);
+            }
+            Console.WriteLine();
+            
+        }
         
     }
  }   
