@@ -1,40 +1,37 @@
 ﻿using System;
+using System.Globalization;
 
 namespace PracticeOne
 {
  public class Program{
 
-    static void Main(string[] args){
-        // Arrays
-
-        int [] favNums=new int[3];
-        favNums[0]=23;
-        Console.WriteLine("FavNum 0 : {0}",favNums[0]);
-
-        string[] customers={"Bob","Sally","Sue"};
-        var employees=new[] {"Mike","Paul","Rick"};
-        object[] randomArray={"Paul",45,1.234};
-        Console.WriteLine("Random Array 0 : {0}",randomArray[0].GetType());
-        Console.WriteLine("Array Size : {0}",randomArray.Length);
-        
-        for(int i=0; i<randomArray.Length; i++){
-            Console.WriteLine("Array : {0} : Value : {1}",i,randomArray[i]);
-            
-        }
-        Console.WriteLine("-----------------");
-        string[,] custNames=new string[2,2] {{"Bob","Smith"},{"Sally","Smith"}};
-        Console.WriteLine("MD Value : {0}",custNames.GetValue(1,1));
-        
-        for (int i = 0; i < custNames.GetLength(0); i++)
-        {
-            for (int j = 0; j < custNames.GetLength(0); j++)
-            {
-                Console.WriteLine("{0}",custNames[i,j]);
-            }
-            Console.WriteLine();
-            
+    static void PrintArray(int[] intArray, string mess){
+        foreach(int k in intArray){
+        Console.WriteLine("{0} : {1}",mess,k);
         }
         
     }
+
+    static void Main(string[] args){
+        // Functions
+
+        int[] randNums={1,4,9,2};
+        PrintArray(randNums,"ForEach");
+
+        Array.Sort(randNums);
+        Array.Reverse(randNums);
+
+        const string textAge="-23";
+        int age=Convert.ToInt32(textAge);
+        Console.WriteLine("{0}",age);
+
+        double money=-10D / 3D;
+        
+        Console.WriteLine(money.ToString("C",CultureInfo.CurrentCulture));
+        Console.WriteLine(money.ToString("C",CultureInfo.CreateSpecificCulture("bn-BD")));
+
+        
+      
+    } 
  }   
 }
