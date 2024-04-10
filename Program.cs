@@ -8,32 +8,20 @@ namespace PracticeOne
 
         static void Main(string[] args)
         {
+            string name = "Ahsan";
 
-            bool threeDiv = false;
-            bool fiveDiv = false;
-
-
-            for (int i = 1; i <= 100; i++)
+            for (int i = 0; i < name.Length; i++)
             {
-                threeDiv = i % 3 == 0;
-                fiveDiv = i % 5 == 0;
+                Console.WriteLine(name[i]);
+                Thread.Sleep(250);
+            }
 
-                if (threeDiv && fiveDiv)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (threeDiv)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (fiveDiv)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
+            Console.WriteLine(string.IsNullOrEmpty(name));
+
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(name[i]);
+                Thread.Sleep(250);
             }
         }
     }
