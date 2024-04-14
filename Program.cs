@@ -8,32 +8,35 @@ namespace PracticeOne
 
         static void Main(string[] args)
         {
+            Console.Write("Enter Password: ");
+            string password = Console.ReadLine();
 
-            bool threeDiv = false;
-            bool fiveDiv = false;
+            Console.Write("Enter Password again: ");
+            string passwordC = Console.ReadLine();
 
-
-            for (int i = 1; i <= 100; i++)
+            if (!password.Equals(string.Empty) && !passwordC.Equals(string.Empty))
             {
-                threeDiv = i % 3 == 0;
-                fiveDiv = i % 5 == 0;
-
-                if (threeDiv && fiveDiv)
+                if (password.Length >= 6 && passwordC.Length >= 6)
                 {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (threeDiv)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (fiveDiv)
-                {
-                    Console.WriteLine("Buzz");
+                    if (password.Equals(passwordC))
+                    {
+                        Console.WriteLine("Password match");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Password don not match");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine("PPlease enter 6 or more characters!");
                 }
+
+            }
+            else
+            {
+                Console.WriteLine("Please enter a password");
+
             }
         }
     }
