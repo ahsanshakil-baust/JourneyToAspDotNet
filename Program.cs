@@ -8,20 +8,35 @@ namespace PracticeOne
 
         static void Main(string[] args)
         {
-            string name = "Ahsan";
+            Console.Write("Enter Password: ");
+            string password = Console.ReadLine();
 
-            for (int i = 0; i < name.Length; i++)
+            Console.Write("Enter Password again: ");
+            string passwordC = Console.ReadLine();
+
+            if (!password.Equals(string.Empty) && !passwordC.Equals(string.Empty))
             {
-                Console.WriteLine(name[i]);
-                Thread.Sleep(250);
+                if (password.Length >= 6 && passwordC.Length >= 6)
+                {
+                    if (password.Equals(passwordC))
+                    {
+                        Console.WriteLine("Password match");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Password don not match");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("PPlease enter 6 or more characters!");
+                }
+
             }
-
-            Console.WriteLine(string.IsNullOrEmpty(name));
-
-            for (int i = name.Length - 1; i >= 0; i--)
+            else
             {
-                Console.WriteLine(name[i]);
-                Thread.Sleep(250);
+                Console.WriteLine("Please enter a password");
+
             }
         }
     }
