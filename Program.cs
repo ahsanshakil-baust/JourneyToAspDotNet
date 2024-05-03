@@ -8,18 +8,16 @@ namespace PracticeOne
 
         static void Main(string[] args)
         {
-            int[] numbers = new int[3];
-
-            Console.Write("Enter a number: ");
-            numbers[0] = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Enter a number: ");
-            numbers[1] = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Enter a number: ");
-            numbers[2] = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine($"{numbers[0]} {numbers[1]} {numbers[2]}");
+            List<int> listNumber = new List<int>() { 1, 2, 3 };
+            foreach (int x in listNumber)
+            {
+                Console.WriteLine("List : {0}", x);
+            }
+            listNumber.RemoveAt(1);
+            foreach (int x in listNumber)
+            {
+                Console.WriteLine("List : {0}", x);
+            }
         }
     }
 }
