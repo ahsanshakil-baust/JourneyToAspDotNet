@@ -8,47 +8,32 @@ namespace PracticeOne
 
         static void Main(string[] args)
         {
-            Dictionary<int, string> names = new Dictionary<int, string>(){
-                {1,"Abbas"},
-                {2,"Sabbir"}
-            };
+            List<int> odd = new List<int>();
+            List<int> even = new List<int>();
 
-            // names.Add(1, "Abbas");
-            // names.Add(2, "Sabbir");
-
-            // for (int i = 0; i < names.Count; i++)
-            // {
-            //     KeyValuePair<int, string> pair = names.ElementAt(i);
-            //     Console.WriteLine($"{pair.Key} - {pair.Value}");
-            // }
-
-
-            // if (names.TryGetValue(2, out string name))
-            // {
-            //     Console.WriteLine(name);
-            // }
-            // else
-            // {
-            //     Console.WriteLine("Not Found");
-            // }
-
-
-            if (names.ContainsKey(2))
+            for (int i = 1; i < 20; i++)
             {
-                names.Remove(2);
-            }
-            else
-            {
-                Console.WriteLine("Not Found");
+                if (i % 2 == 0)
+                {
+                    even.Add(i);
+                }
+                else
+                {
+                    odd.Add(i);
+                }
             }
 
-            foreach (KeyValuePair<int, string> item in names)
+            foreach (var item in even)
             {
-                Console.WriteLine($"{item.Key} - {item.Value}");
+                Console.WriteLine($"{item}");
+
             }
 
+            foreach (var item in odd)
+            {
+                Console.WriteLine($"{item}");
 
-            Console.ReadLine();
+            }
         }
     }
 }
