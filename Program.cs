@@ -8,47 +8,23 @@ namespace PracticeOne
 
         static void Main(string[] args)
         {
-            Dictionary<int, string> names = new Dictionary<int, string>(){
-                {1,"Abbas"},
-                {2,"Sabbir"}
-            };
+            int num = 7;
+            int length = 8;
+            int[] result = new int[length];
+            int count = 0;
 
-            // names.Add(1, "Abbas");
-            // names.Add(2, "Sabbir");
-
-            // for (int i = 0; i < names.Count; i++)
-            // {
-            //     KeyValuePair<int, string> pair = names.ElementAt(i);
-            //     Console.WriteLine($"{pair.Key} - {pair.Value}");
-            // }
-
-
-            // if (names.TryGetValue(2, out string name))
-            // {
-            //     Console.WriteLine(name);
-            // }
-            // else
-            // {
-            //     Console.WriteLine("Not Found");
-            // }
-
-
-            if (names.ContainsKey(2))
+            for (int i = 1; i < result.Length; i++, count++)
             {
-                names.Remove(2);
-            }
-            else
-            {
-                Console.WriteLine("Not Found");
+                result[count] = num * i;
+                Console.WriteLine("numb {0}", count);
+
             }
 
-            foreach (KeyValuePair<int, string> item in names)
+            foreach (var item in result)
             {
-                Console.WriteLine($"{item.Key} - {item.Value}");
+                Console.WriteLine($"{item}");
+
             }
-
-
-            Console.ReadLine();
         }
     }
 }
