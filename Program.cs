@@ -3,28 +3,30 @@ using System.Globalization;
 
 namespace PracticeOne
 {
+
+    class Test
+    {
+        public static void testOne()
+        {
+
+            Console.WriteLine("Hello");
+        }
+
+    }
     public class Program
     {
-
         static void Main(string[] args)
         {
-            int num = 7;
-            int length = 8;
-            int[] result = new int[length];
-            int count = 0;
+            // Test test = new Test();
+            // test.testOne();
 
-            for (int i = 1; i < result.Length; i++, count++)
-            {
-                result[count] = num * i;
-                Console.WriteLine("numb {0}", count);
 
-            }
-
-            foreach (var item in result)
-            {
-                Console.WriteLine($"{item}");
-
-            }
+            Test.testOne();
+            WelcomeMessage();
+        }
+        static void WelcomeMessage()
+        {
+            Console.WriteLine("Welcome");
         }
     }
 }
