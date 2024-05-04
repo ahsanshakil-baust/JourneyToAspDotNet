@@ -8,28 +8,19 @@ namespace PracticeOne
 
         static void Main(string[] args)
         {
-            List<int> odd = new List<int>();
-            List<int> even = new List<int>();
+            int num = 7;
+            int length = 8;
+            int[] result = new int[length];
+            int count = 0;
 
-            for (int i = 1; i < 20; i++)
+            for (int i = 1; i < result.Length; i++, count++)
             {
-                if (i % 2 == 0)
-                {
-                    even.Add(i);
-                }
-                else
-                {
-                    odd.Add(i);
-                }
-            }
-
-            foreach (var item in even)
-            {
-                Console.WriteLine($"{item}");
+                result[count] = num * i;
+                Console.WriteLine("numb {0}", count);
 
             }
 
-            foreach (var item in odd)
+            foreach (var item in result)
             {
                 Console.WriteLine($"{item}");
 
