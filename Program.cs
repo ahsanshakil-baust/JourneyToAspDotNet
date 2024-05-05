@@ -6,26 +6,32 @@ namespace PracticeOne
 {
     public class Program
     {
+        static string name = "Allu";
         static void Main(string[] args)
         {
-            CreateAndPrintArray();
-            Message();
-        }
+            int[] nums = new int[3];
 
-        static void CreateAndPrintArray()
-        {
-            int[] number = new int[5] { 0, 1, 2, 3, 4 };
-
-            foreach (var item in number)
+            for (int i = 0; i < nums.Length; i++)
             {
-                Console.WriteLine($"{item}");
+                nums[i] = ReadNumber();
             }
+
+            foreach (int x in nums)
+            {
+                Console.WriteLine($"{x}");
+            }
+            // Console.WriteLine(PrintIntro());
         }
 
-        static void Message()
+        static int ReadNumber()
         {
-            Console.WriteLine("Welcome");
+            Console.Write("Enter a Number : ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
 
+        static string PrintIntro()
+        {
+            return name;
         }
     }
 }
