@@ -7,71 +7,58 @@ namespace PracticeOne
 {
     public class Program
     {
-        static string name = "Allu";
         static void Main(string[] args)
         {
-            // int[] nums = new int[3];
+            // int num = 0;
+            // bool success = test(out num);
+            // Console.WriteLine(num);
+            // Console.WriteLine(success);
 
-            // int first = ReadNumber();
-            // int second = ReadNumber();
+            List<string> shoppingList = new List<string> { "Coffee", "Milk" };
+            // Console.WriteLine(shoppingList.IndexOf("Milk"));
+            // Console.WriteLine(FindIndex("Milk", shoppingList, out int index));
+            // Console.WriteLine(index);
 
-            // Console.WriteLine(Add(a: second, b: first));
+            if (FindIndex("Milk", shoppingList, out int index))
+            {
+                Console.WriteLine($"Found at index {index}");
 
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
 
-            // for (int i = 0; i < nums.Length; i++)
-            // {
-            //     nums[i] = ReadNumber();
-            // }
-
-            // foreach (int x in nums)
-            // {
-            //     Console.WriteLine($"{x}");
-            // }
-            // Console.WriteLine(PrintIntro());
-            string name = ReadUserDetails("Enter Your Name");
-            string age = ReadUserDetails("ENter Your Age");
-
-            Console.WriteLine(UserDetails(name, age));
+            }
 
         }
 
-        // static int Add(int a, int b = default)
-        // {
-        //     return a + b;
-        // }
-
-
-        // static int Add(int a, int b = 0)
-        // {
-        //     return a + b;
-        // }
-
-
-        static int Add(int a, [Optional] int b)
+        static bool FindIndex(string s, List<string> list, out int index)
         {
-            return a + b;
+            index = -1;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].ToLower().Equals("coffee"))
+                {
+                    index = i;
+                }
+
+            }
+
+            return index > -1;
         }
 
-        static string UserDetails(string name, string age)
+        static bool test(out int num)
         {
-            return $"Hello my name is {name} and my age is {age}";
+            num = 5;
+            return true;
         }
 
-        static int ReadNumber()
+        static bool TryParse(string s, List<string> list, out int result)
         {
-            Console.Write("Enter a Number : ");
-            return Convert.ToInt32(Console.ReadLine());
+            result = 0;
+            return true;
         }
 
-        static string ReadUserDetails(string message)
-        {
-            Console.Write($"{message} : ");
-            return Console.ReadLine();
-        }
-
-        static string PrintIntro()
-        {
-            return name;
-        }
     }
 }
