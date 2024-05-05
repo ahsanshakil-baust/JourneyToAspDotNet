@@ -1,31 +1,77 @@
 ﻿using System;
 using System.Globalization;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace PracticeOne
 {
     public class Program
     {
+        static string name = "Allu";
         static void Main(string[] args)
         {
-            CreateAndPrintArray();
-            Message();
+            // int[] nums = new int[3];
+
+            // int first = ReadNumber();
+            // int second = ReadNumber();
+
+            // Console.WriteLine(Add(a: second, b: first));
+
+
+            // for (int i = 0; i < nums.Length; i++)
+            // {
+            //     nums[i] = ReadNumber();
+            // }
+
+            // foreach (int x in nums)
+            // {
+            //     Console.WriteLine($"{x}");
+            // }
+            // Console.WriteLine(PrintIntro());
+            string name = ReadUserDetails("Enter Your Name");
+            string age = ReadUserDetails("ENter Your Age");
+
+            Console.WriteLine(UserDetails(name, age));
+
         }
 
-        static void CreateAndPrintArray()
-        {
-            int[] number = new int[5] { 0, 1, 2, 3, 4 };
+        // static int Add(int a, int b = default)
+        // {
+        //     return a + b;
+        // }
 
-            foreach (var item in number)
-            {
-                Console.WriteLine($"{item}");
-            }
+
+        // static int Add(int a, int b = 0)
+        // {
+        //     return a + b;
+        // }
+
+
+        static int Add(int a, [Optional] int b)
+        {
+            return a + b;
         }
 
-        static void Message()
+        static string UserDetails(string name, string age)
         {
-            Console.WriteLine("Welcome");
+            return $"Hello my name is {name} and my age is {age}";
+        }
 
+        static int ReadNumber()
+        {
+            Console.Write("Enter a Number : ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        static string ReadUserDetails(string message)
+        {
+            Console.Write($"{message} : ");
+            return Console.ReadLine();
+        }
+
+        static string PrintIntro()
+        {
+            return name;
         }
     }
 }
