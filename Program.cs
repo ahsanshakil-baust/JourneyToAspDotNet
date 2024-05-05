@@ -1,32 +1,31 @@
 ﻿using System;
 using System.Globalization;
+using System.Text;
 
 namespace PracticeOne
 {
-
-    class Test
-    {
-        public static void testOne()
-        {
-
-            Console.WriteLine("Hello");
-        }
-
-    }
     public class Program
     {
         static void Main(string[] args)
         {
-            // Test test = new Test();
-            // test.testOne();
-
-
-            Test.testOne();
-            WelcomeMessage();
+            CreateAndPrintArray();
+            Message();
         }
-        static void WelcomeMessage()
+
+        static void CreateAndPrintArray()
+        {
+            int[] number = new int[5] { 0, 1, 2, 3, 4 };
+
+            foreach (var item in number)
+            {
+                Console.WriteLine($"{item}");
+            }
+        }
+
+        static void Message()
         {
             Console.WriteLine("Welcome");
+
         }
     }
 }
